@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FileImg\3301.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FileImg\3301.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.identity" Version="2.2.0" />
+    <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="5.0.15" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="5.0.15" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="5.0.15" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="5.0.15">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>

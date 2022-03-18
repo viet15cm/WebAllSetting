@@ -1,0 +1,28 @@
+﻿@using WebProject.Models
+@model ICollection<Product>
+@{
+    ViewData["ActivePageProductManager"] = "product";
+    ViewData["ActivePageTop"] = "ProductManager";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>
+                <a class="btn d-block btn-danger" asp-route-id="@item.Id" asp-action="ViewsProduct">Xem</a>
+            </td>
+        </tr>
+    }
+</table>
